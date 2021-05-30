@@ -1,82 +1,30 @@
-let stake = document.getElementById("stake");
-let sushi = document.getElementById("sushi");
-let burger = document.getElementById("burger");
-let itemx = document.querySelector(".itemx");
-function generateStake(e) {
-  let stakeDiv = document.createElement("div");
-  stakeDiv.setAttribute("class", "itemz");
-  let image = document.createElement("img");
-  image.src = "/img/hanxiao-zzxqoEa64_0-unsplash.jpg";
-  image.style.height = "60px";
-  stakeDiv.appendChild(image);
-  let text = document.createElement("p");
-  text.textContent = "Stake";
-  stakeDiv.appendChild(text);
-  let price = document.createElement("h3");
-  price.textContent = "$15.00";
-  stakeDiv.appendChild(price);
-  let cancel = document.createElement("button");
-  cancel.textContent = "Cancel";
-  cancel.setAttribute("class", "btn-main");
-  cancel.addEventListener(
-    "click",
-    (removediv = () => {
-      stakeDiv.remove();
-    })
-  );
-  stakeDiv.appendChild(cancel);
-  itemx.appendChild(stakeDiv);
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
 }
-function generateSushi(e) {
-  let sushiDiv = document.createElement("div");
-  sushiDiv.setAttribute("class", "itemz");
-  let image = document.createElement("img");
-  image.src = "/img/ruyan-ayten-gUFI8SxNvxo-unsplash.jpg";
-  image.style.height = "60px";
-  sushiDiv.appendChild(image);
-  let text = document.createElement("p");
-  text.textContent = "Sushi";
-  sushiDiv.appendChild(text);
-  let price = document.createElement("h3");
-  price.textContent = "$35.70";
-  sushiDiv.appendChild(price);
-  let cancel = document.createElement("button");
-  cancel.textContent = "Cancel";
-  cancel.setAttribute("class", "btn-main");
-  cancel.addEventListener(
-    "click",
-    (removediv = () => {
-      sushiDiv.remove();
-    })
-  );
-  sushiDiv.appendChild(cancel);
-  itemx.appendChild(sushiDiv);
+
+function currentSlide1(n) {
+  showSlides((slideIndex = n));
 }
-function generateBurger(e) {
-  let burgerDiv = document.createElement("div");
-  burgerDiv.setAttribute("class", "itemz");
-  let image = document.createElement("img");
-  image.src = "/img/menu-main.jpg";
-  image.style.height = "60px";
-  burgerDiv.appendChild(image);
-  let text = document.createElement("p");
-  text.textContent = "Burger";
-  burgerDiv.appendChild(text);
-  let price = document.createElement("h3");
-  price.textContent = "$45.68";
-  burgerDiv.appendChild(price);
-  let cancel = document.createElement("button");
-  cancel.textContent = "Cancel";
-  cancel.setAttribute("class", "btn-main");
-  cancel.addEventListener(
-    "click",
-    (removediv = () => {
-      burgerDiv.remove();
-    })
-  );
-  burgerDiv.appendChild(cancel);
-  itemx.appendChild(burgerDiv);
+
+function showSlides(n) {
+  var j;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (j = 0; j < slides.length; j++) {
+    slides[j].style.display = "none";
+  }
+  for (j = 0; j < dots.length; j++) {
+    dots[j].className = dots[j].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }
-stake.addEventListener("click", generateStake);
-sushi.addEventListener("click", generateSushi);
-burger.addEventListener("click", generateBurger);
