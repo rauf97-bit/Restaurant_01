@@ -16,9 +16,9 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: #fff;
 }
 .wrapper1 h1 {
-  color: #000;
   font-size: 3rem;
 }
 nav {
@@ -31,7 +31,7 @@ a {
 }
 nav a {
   text-decoration: none;
-  color: black;
+  color: white;
   margin: 5px 20px;
   transition: all 0.3s;
   font-size: 25px;
@@ -171,7 +171,24 @@ body > main > section.order > div > a {
     text-align: center;
     width: 100%;
   }
+  .row {
+    width: 80vw;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .wrapper1 {
+    width: 100vw;
+  }
+  footer h4 {
+    font-size: 0.7rem;
+  }
+  footer h3,
+  footer a {
+    font-size: 0.9rem;
+  }
 }
+
 @media (max-width: 400px) {
   body > main > header > div:nth-child(1) {
     flex-direction: column;
@@ -323,6 +340,7 @@ body > main > section.order > div > a {
 /* Footer */
 
 .row {
+  width: 100vw;
   display: flex;
   justify-content: space-around;
   padding: 50px;
