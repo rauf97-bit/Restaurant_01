@@ -163,6 +163,15 @@ body > main > section.order > div > a {
     width: 50%;
   }
 }
+
+@media (max-width: 501px) {
+  nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    width: 100%;
+  }
+}
 @media (max-width: 400px) {
   body > main > header > div:nth-child(1) {
     flex-direction: column;
@@ -182,12 +191,7 @@ body > main > section.order > div > a {
   .text h2 {
     font-size: 1.8rem;
   }
-  nav {
-    display: grid;
-    grid-template-columns: 1fr;
-    text-align: center;
-    width: 100%;
-  }
+
   div.intro {
     text-align: center;
     justify-content: space-between;
