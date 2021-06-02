@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
   font-family: Pattaya, Tahoma, Geneva, Verdana, sans-serif;
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 /* Index */
@@ -174,11 +175,14 @@ body > main > section.order > div > a {
     width: 100%;
   }
   .row {
-    width: 80vw;
+    width: 72vw;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-  }
+    justify-content: flex-start;
+  } /* 
+  .address {
+    margin-left: 10%;
+  } */
   .wrapper1 {
     width: 100vw;
   }
