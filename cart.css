@@ -37,12 +37,13 @@ body {
 }
 
 #site-header h1 {
-  font-size: 2.8rem;
-  font-weight: 300;
+  font-size: 3.2rem;
+  font-weight: 600;
   padding: 20px 0;
   position: relative;
   margin: 0;
   text-align: center;
+  color: #53b5aa;
 }
 
 #site-header > div {
@@ -97,7 +98,6 @@ a:hover {
   margin: 0 auto;
   width: 80vw;
 }
-
 #cart {
   width: 100%;
 }
@@ -230,7 +230,7 @@ a:hover {
 }
 
 .product footer .full-price {
-  background: rgb(112, 108, 108);
+  background: #53b5aa;
   color: #fff;
   float: right;
   font-size: 22px;
@@ -279,21 +279,37 @@ a:hover {
 }
 
 .qt,
-.qt2,
 .qt1,
+.qt2,
+.qt3,
+.qt4,
+.qt5,
+.qt6,
 .qt-plus,
 .qt-plus1,
 .qt-plus2,
+.qt-plus3,
+.qt-plus4,
+.qt-plus5,
+.qt-plus6,
 .qt-minus,
 .qt-minus1,
-.qt-minus2 {
+.qt-minus2,
+.qt-minus3,
+.qt-minus4,
+.qt-minus5,
+.qt-minus6 {
   display: block;
   float: left;
 }
 
 .qt,
 .qt1,
-.qt2 {
+.qt2,
+.qt3,
+.qt4,
+.qt5,
+.qt6 {
   font-size: 19px;
   line-height: 50px;
   width: 70px;
@@ -303,9 +319,17 @@ a:hover {
 .qt-plus,
 .qt-plus1,
 .qt-plus2,
+.qt-plus3,
+.qt-plus4,
+.qt-plus5,
+.qt-plus6,
 .qt-minus,
 .qt-minus1,
-.qt-minus2 {
+.qt-minus2,
+.qt-minus3,
+.qt-minus4,
+.qt-minus5,
+.qt-minus6 {
   background: #fcfcfc;
   border: none;
   font-size: 30px;
@@ -322,9 +346,17 @@ a:hover {
 .qt-plus:hover,
 .qt-plus1:hover,
 .qt-plus2:hover,
+.qt-plus3:hover,
+.qt-plus4:hover,
+.qt-plus5:hover,
+.qt-plus6:hover,
 .qt-minus:hover,
 .qt-minus1:hover,
-.qt-minus2:hover {
+.qt-minus2:hover,
+.qt-minus4:hover,
+.qt-minus5:hover,
+.qt-minus6:hover,
+.qt-minus3:hover {
   background: #53b5aa;
   color: #fff;
   cursor: pointer;
@@ -332,13 +364,21 @@ a:hover {
 
 .qt-plus,
 .qt-plus1,
-.qt-plus2 {
+.qt-plus2,
+.qt-plus3,
+.qt-plus4,
+.qt-plus5,
+.qt-plus6 {
   line-height: 50px;
 }
 
 .qt-minus,
 .qt-minus1,
-.qt-minus2 {
+.qt-minus2,
+.qt-minus3,
+.qt-minus4,
+.qt-minus5,
+.qt-minus6 {
   line-height: 47px;
 }
 
@@ -382,7 +422,7 @@ a:hover {
 }
 
 .btn1 {
-  background: rgb(112, 108, 108);
+  background: #53b5aa;
   border: 1px solid #999;
   border-style: none none solid none;
   cursor: pointer;
@@ -403,7 +443,7 @@ a:hover {
 
 .btn1:hover {
   color: #fff;
-  background: #429188;
+  background: rgb(112, 108, 108);
 }
 
 .type {
@@ -444,4 +484,16 @@ a:hover {
 
 .added {
   margin: 0 -50px 0 0 !important;
+}
+.cart-header {
+  font-size: 2rem;
+  text-align: center;
+  margin: auto;
+  color: #53b5aa;
+}
+fieldset {
+  margin: 25px auto;
+}
+legend {
+  margin: auto;
 }

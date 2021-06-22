@@ -1,224 +1,38 @@
-/* const products = [
-  {
-    id: 1,
-    title: "Macbook Pro",
-    price: 2500.0,
-    qty: 1,
-    image: "http://lorempixel.com/150/150/",
-  },
-  {
-    id: 2,
-    title: "Asus ROG Gaming",
-    price: 1000.0,
-    qty: 1,
-    image: "http://lorempixel.com/150/150/",
-  },
-  {
-    id: 3,
-    title: "Amazon Kindle",
-    price: 150.0,
-    qty: 1,
-    image: "http://lorempixel.com/150/150/",
-  },
-  {
-    id: 4,
-    title: "Another Product",
-    price: 10,
-    qty: 1,
-    image: "http://lorempixel.com/150/150/",
-  },
-];
-
-function formatNumber(n, c, d, t) {
-  var c = isNaN((c = Math.abs(c))) ? 2 : c,
-    d = d === undefined ? "." : d,
-    t = t === undefined ? "," : t,
-    s = n < 0 ? "-" : "",
-    i = String(parseInt((n = Math.abs(Number(n) || 0).toFixed(c)))),
-    j = (j = i.length) > 3 ? j % 3 : 0;
-  return (
-    s +
-    (j ? i.substr(0, j) + t : "") +
-    i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) +
-    (c
-      ? d +
-        Math.abs(n - i)
-          .toFixed(c)
-          .slice(2)
-      : "")
-  );
-}
-
-// Allow the formatNumber function to be used as a filter
-Vue.filter("formatCurrency", function (value) {
-  return formatNumber(value, 2, ".", ",");
-});
-
-// The shopping cart component
-Vue.component("shopping-cart", {
-  props: ["items"],
-
-  computed: {
-    Total() {
-      let total = 0;
-      this.items.forEach((item) => {
-        total += item.price * item.qty;
-      });
-      return total;
-    },
-  },
-
-  methods: {
-    // Remove item by its index
-    removeItem(index) {
-      this.items.splice(index, 1);
-    },
-  },
-});
-
-const vm = new Vue({
-  el: "#app",
-
-  data: {
-    cartItems: [],
-    items: products,
-  },
-
-  methods: {
-    // Add Items to cart
-    addToCart(itemToAdd) {
-      let found = false;
-
-      // Add the item or increase qty
-      let itemInCart = this.cartItems.filter(
-        (item) => item.id === itemToAdd.id
-      );
-      let isItemInCart = itemInCart.length > 0;
-
-      if (isItemInCart === false) {
-        this.cartItems.push(Vue.util.extend({}, itemToAdd));
-      } else {
-        itemInCart[0].qty += itemToAdd.qty;
-      }
-
-      itemToAdd.qty = 1;
-    },
-  },
-});
- */
-
-/* var check = false;
-
-function changeVal(el) {
-  var qt = parseFloat(el.parent().children(".qt").html());
-  var price = parseFloat(el.parent().children(".price").html());
-  var eq = Math.round(price * qt * 100) / 100;
-
-  el.parent()
-    .children(".full-price")
-    .html(eq + "€");
-
-  changeTotal();
-}
-
-function changeTotal() {
-  var price = 0;
-
-  $(".full-price").each(function (index) {
-    price += parseFloat($(".full-price").eq(index).html());
-  });
-
-  price = Math.round(price * 100) / 100;
-  var tax = Math.round(price * 0.05 * 100) / 100;
-  var shipping = parseFloat($(".shipping span").html());
-  var fullPrice = Math.round((price + tax + shipping) * 100) / 100;
-
-  if (price == 0) {
-    fullPrice = 0;
-  }
-
-  $(".subtotal span").html(price);
-  $(".tax span").html(tax);
-  $(".total span").html(fullPrice);
-}
-
-$(document).ready(function () {
-  $(".remove").click(function () {
-    var el = $(this);
-    el.parent().parent().addClass("removed");
-    window.setTimeout(function () {
-      el.parent()
-        .parent()
-        .slideUp("fast", function () {
-          el.parent().parent().remove();
-          if ($(".product").length == 0) {
-            if (check) {
-              $("#cart").html(
-                "<h1>The shop does not function, yet!</h1><p>If you liked my shopping cart, please take a second and heart this Pen on <a href='https://codepen.io/ziga-miklic/pen/xhpob'>CodePen</a>. Thank you!</p>"
-              );
-            } else {
-              $("#cart").html("<h1>No products!</h1>");
-            }
-          }
-          changeTotal();
-        });
-    }, 200);
-  });
-
-  $(".qt-plus").click(function () {
-    $(this)
-      .parent()
-      .children(".qt")
-      .html(parseInt($(this).parent().children(".qt").html()) + 1);
-
-    $(this).parent().children(".full-price").addClass("added");
-
-    var el = $(this);
-    window.setTimeout(function () {
-      el.parent().children(".full-price").removeClass("added");
-      changeVal(el);
-    }, 150);
-  });
-
-  $(".qt-minus").click(function () {
-    child = $(this).parent().children(".qt");
-
-    if (parseInt(child.html()) > 1) {
-      child.html(parseInt(child.html()) - 1);
-    }
-
-    $(this).parent().children(".full-price").addClass("minused");
-
-    var el = $(this);
-    window.setTimeout(function () {
-      el.parent().children(".full-price").removeClass("minused");
-      changeVal(el);
-    }, 150);
-  });
-
-  window.setTimeout(function () {
-    $(".is-open").removeClass("is-open");
-  }, 1200);
-
-  $(".btn").click(function () {
-    check = true;
-    $(".remove").click();
-  });
-});
- */
-
 let qty = document.querySelector(".qt");
 let qty1 = document.querySelector(".qt1");
 let qty2 = document.querySelector(".qt2");
+
+let qty3 = document.querySelector(".qt3");
+let qty4 = document.querySelector(".qt4");
+let qty5 = document.querySelector(".qt5");
+let qty6 = document.querySelector(".qt6");
+
 let addQty = document.querySelector(".qt-plus");
 let addQty1 = document.querySelector(".qt-plus1");
 let addQty2 = document.querySelector(".qt-plus2");
+
+let addQty3 = document.querySelector(".qt-plus3");
+let addQty4 = document.querySelector(".qt-plus4");
+let addQty5 = document.querySelector(".qt-plus5");
+let addQty6 = document.querySelector(".qt-plus6");
+
 let subQty = document.querySelector(".qt-minus");
 let subQty1 = document.querySelector(".qt-minus1");
 let subQty2 = document.querySelector(".qt-minus2");
+
+let subQty3 = document.querySelector(".qt-minus3");
+let subQty4 = document.querySelector(".qt-minus4");
+let subQty5 = document.querySelector(".qt-minus5");
+let subQty6 = document.querySelector(".qt-minus6");
+
 let price = document.querySelector(".price1");
 let price1 = document.querySelector(".price2");
+
 let price2 = document.querySelector(".price3");
+let price3 = document.querySelector(".price4");
+let price4 = document.querySelector(".price5");
+let price5 = document.querySelector(".price6");
+let price6 = document.querySelector(".price7");
 let total = document.querySelector(".total1");
 
 function add(e) {
@@ -236,7 +50,7 @@ function add1(e) {
   let x = currentVal + 1;
   qty1.textContent = x;
   let cash = new Number(price1.textContent);
-  cash += 13;
+  cash += 30;
   price1.textContent = cash;
   totalCalc();
 }
@@ -250,6 +64,47 @@ function add2(e) {
   price2.textContent = cash;
   totalCalc();
 }
+
+function add3(e) {
+  let currentVal = new Number(qty3.textContent);
+  let x = currentVal + 1;
+  qty3.textContent = x;
+  let cash = new Number(price3.textContent);
+  cash += 15;
+  price3.textContent = cash;
+  totalCalc();
+}
+
+function add4(e) {
+  let currentVal = new Number(qty4.textContent);
+  let x = currentVal + 1;
+  qty4.textContent = x;
+  let cash = new Number(price4.textContent);
+  cash += 25;
+  price4.textContent = cash;
+  totalCalc();
+}
+
+function add5(e) {
+  let currentVal = new Number(qty5.textContent);
+  let x = currentVal + 1;
+  qty5.textContent = x;
+  let cash = new Number(price5.textContent);
+  cash += 43;
+  price5.textContent = cash;
+  totalCalc();
+}
+
+function add6(e) {
+  let currentVal = new Number(qty6.textContent);
+  let x = currentVal + 1;
+  qty6.textContent = x;
+  let cash = new Number(price6.textContent);
+  cash += 35;
+  price6.textContent = cash;
+  totalCalc();
+}
+
 function substract(e) {
   let currentVal = new Number(qty.textContent);
   let x = currentVal - 1;
@@ -270,7 +125,7 @@ function substract1(e) {
   if (x > 0) {
     qty1.textContent = x;
     let cash = new Number(price1.textContent);
-    cash -= 13;
+    cash -= 30;
     price1.textContent = cash;
   } else {
     qty1.textContent = 0;
@@ -278,6 +133,7 @@ function substract1(e) {
   }
   totalCalc();
 }
+
 function substract2(e) {
   let currentVal = new Number(qty2.textContent);
   let x = currentVal - 1;
@@ -292,20 +148,89 @@ function substract2(e) {
   }
   totalCalc();
 }
+function substract3(e) {
+  let currentVal = new Number(qty3.textContent);
+  let x = currentVal - 1;
+  if (x > 0) {
+    qty3.textContent = x;
+    let cash = new Number(price3.textContent);
+    cash -= 15;
+    price3.textContent = cash;
+  } else {
+    qty3.textContent = 0;
+    price3.textContent = 0;
+  }
+  totalCalc();
+}
+function substract4(e) {
+  let currentVal = new Number(qty4.textContent);
+  let x = currentVal - 1;
+  if (x > 0) {
+    qty4.textContent = x;
+    let cash = new Number(price4.textContent);
+    cash -= 25;
+    price4.textContent = cash;
+  } else {
+    qty4.textContent = 0;
+    price4.textContent = 0;
+  }
+  totalCalc();
+}
+function substract5(e) {
+  let currentVal = new Number(qty5.textContent);
+  let x = currentVal - 1;
+  if (x > 0) {
+    qty5.textContent = x;
+    let cash = new Number(price5.textContent);
+    cash -= 43;
+    price5.textContent = cash;
+  } else {
+    qty5.textContent = 0;
+    price5.textContent = 0;
+  }
+  totalCalc();
+}
+function substract6(e) {
+  let currentVal = new Number(qty6.textContent);
+  let x = currentVal - 1;
+  if (x > 0) {
+    qty6.textContent = x;
+    let cash = new Number(price6.textContent);
+    cash -= 35;
+    price6.textContent = cash;
+  } else {
+    qty6.textContent = 0;
+    price6.textContent = 0;
+  }
+  totalCalc();
+}
 
 function totalCalc(e) {
   total.textContent =
     JSON.parse(price.textContent) +
     JSON.parse(price1.textContent) +
-    JSON.parse(price2.textContent);
+    JSON.parse(price2.textContent) +
+    JSON.parse(price3.textContent) +
+    JSON.parse(price4.textContent) +
+    JSON.parse(price5.textContent) +
+    JSON.parse(price6.textContent);
 }
 
 addQty.addEventListener("click", add);
 addQty1.addEventListener("click", add1);
 addQty2.addEventListener("click", add2);
+addQty3.addEventListener("click", add3);
+addQty4.addEventListener("click", add4);
+addQty5.addEventListener("click", add5);
+addQty6.addEventListener("click", add6);
+
 subQty.addEventListener("click", substract);
 subQty1.addEventListener("click", substract1);
 subQty2.addEventListener("click", substract2);
+subQty3.addEventListener("click", substract3);
+subQty4.addEventListener("click", substract4);
+subQty5.addEventListener("click", substract5);
+subQty6.addEventListener("click", substract6);
 
 console.log(qty);
 console.log(addQty);

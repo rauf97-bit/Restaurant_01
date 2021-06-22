@@ -61,7 +61,7 @@ div.intro p,
   margin: 10px 0;
   font-size: 1.2rem;
   color: black;
-  width: 50%;
+  width: 40%;
 }
 
 .btn-main {
@@ -80,6 +80,7 @@ div.intro p,
 }
 .text a {
   color: white;
+  padding: inherit;
 }
 .text button:hover {
   background: yellowgreen;
