@@ -341,6 +341,7 @@ body > main > section.order > div > a {
 }
 .menu-btns {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -380,6 +381,7 @@ body > main > section.order > div > a {
 }
 .gallery .active {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   background-color: white;
 }
