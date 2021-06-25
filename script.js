@@ -12,10 +12,33 @@ function showSlides() {
   if (slideIndex > slides.length) {
     slideIndex = 1;
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
+  // for (i = 0; i < dots.length; i++) {
+  //   dots[i].className = dots[i].className.replace(" active", "");
+  // }
   slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  // dots[slideIndex - 1].className += " active";
   setTimeout(showSlides, 3000); // Change image every 2 seconds
 }
+
+let shawarma = document.querySelector(".shawarma");
+let shawarmaBtn = document.querySelector("#shawarma");
+let pizza = document.querySelector(".pizza");
+let pizzaBtn = document.querySelector("#pizza");
+let burger = document.querySelector(".burger");
+let burgerBtn = document.querySelector("#burger");
+
+shawarmaBtn.addEventListener("click", () => {
+  shawarma.classList.toggle("active");
+  burger.classList.remove("active");
+  pizza.classList.remove("active");
+});
+pizzaBtn.addEventListener("click", () => {
+  pizza.classList.toggle("active");
+  burger.classList.remove("active");
+  shawarma.classList.remove("active");
+});
+burgerBtn.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  shawarma.classList.remove("active");
+  pizza.classList.remove("active");
+});
